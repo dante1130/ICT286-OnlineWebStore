@@ -1,0 +1,50 @@
+/* https://colorhunt.co/palette/dddddd22283130475ef05454 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #EEEEEE;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #F8485E;
+    letter-spacing: 2px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #512D6D
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #00C1D4;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #F8485E
+}
