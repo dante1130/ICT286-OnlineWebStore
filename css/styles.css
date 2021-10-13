@@ -1,4 +1,4 @@
-/* https://colorhunt.co/palette/dddddd22283130475ef05454 */
+/* https://colorhunt.co/palette/512d6df8485eeeeeee00c1d4 */
 
 * {
     box-sizing: border-box;
@@ -30,6 +30,19 @@ a {
     font-weight: 800;
     color: #00C1D4;
     text-decoration: none;
+}
+
+#search {
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+}
+
+.search-bar {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .nav-links {
