@@ -1,14 +1,7 @@
 function search(input) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log(input);
-        }
-    }
-
-    xhr.open("GET", "php/search.php", true);
-    xhr.send();
+    $.get("php/search.php", (data) => {
+        console.log(input);
+    });
 }
 
 $('#search-form').on('submit', (e) => {
