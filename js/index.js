@@ -1,4 +1,4 @@
-const switchPage = (pageRef) => {
+function switchPage(pageRef) {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = () => {
@@ -11,8 +11,7 @@ const switchPage = (pageRef) => {
     xhr.send();
 }
 
-$('a').on('click', (e) => {
-    e.preventDefault();
+$('.nav-link').on('click', (e) => {
     switchPage("search.html");
-    search($(e.currentTarget).text());
+    search($(e.target).text());
 });

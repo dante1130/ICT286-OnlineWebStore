@@ -1,4 +1,4 @@
-const search = (input) => {
+function search(input) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = () => {
@@ -7,7 +7,7 @@ const search = (input) => {
         }
     }
 
-    xhr.open("GET", "#", true);
+    xhr.open("GET", "php/search.php", true);
     xhr.send();
 }
 
