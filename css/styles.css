@@ -6,12 +6,17 @@
     padding: 0;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     color: #EEEEEE;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h1 {
+    font-size: 2rem;
     font-family: 'Bebas Neue', cursive;
     color: #F8485E;
     letter-spacing: 2px;
@@ -114,11 +119,13 @@ a {
     height: 3px;
     background-color: #00C1D4;
     margin: 5px;
+    transition: all 0.3s ease;
 }
 
 /* Mobile */
 @media screen and (max-width: 768px) {
     .nav-links {
+        opacity: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -128,16 +135,28 @@ a {
         top: 8vh;
         background-color: #512D6D;
         width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
         z-index: 1;
     }
 
     .burger-nav {
         display: block;
+        z-index: 2;
     }
 }
 
 .nav-active {
-    transform: translateX(0%);
+    opacity: 100;
+    transition: opacity 0.3s;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

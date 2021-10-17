@@ -13,6 +13,7 @@ $('.nav-link').on('click', (e) => {
 
 $('.burger-nav').on('click', () => {
     $('.nav-links').toggleClass('nav-active');
+    $('.burger-nav').toggleClass('toggle');
 });
 
 function switchPage(pageRef) {
