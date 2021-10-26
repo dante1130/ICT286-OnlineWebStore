@@ -7,19 +7,24 @@
 }
 
 html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
     color: #EEEEEE;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Bebas Neue', cursive;
     color: #F8485E;
     letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00C1D4;
 }
 
 nav {
@@ -38,11 +43,41 @@ a {
     text-decoration: none;
 }
 
+.browse-btn {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: linear-gradient(top, #11CDD4, #11999E);
+    background: linear-gradient(to bottom, #11CDD4, #11999E);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    height: 1%;
+    line-height: 14px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    width: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    box-shadow: 1px 1px 0 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    cursor: pointer;
+
+}
+
 #search {
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
 }
+
+#slider {
+    width: 50%;
+    display: grid;
+}
+
 
 #slider figure {
     position: relative;
@@ -55,6 +90,13 @@ a {
 #slider figure img {
     width: 20%;
     float: left;
+}
+
+#landing {
+    display: grid;
+    text-align: center;
+    background-color: #EFEFEF;
+    padding-top: 5%;
 }
 
 @keyframes slider {
@@ -82,16 +124,20 @@ a {
     95% {
         left: -300%;
     }
-    100% {
-        left: -400%;
-    }
+}
+
+.slogan {
+    padding-top: 5%;
+}
+
+.gaming-img {
+    width: 75%;
 }
 
 .search-bar {
     padding-top: 10px;
     display: flex;
     justify-content: center;
-    
 }
 
 .nav-links {
@@ -124,6 +170,26 @@ a {
 
 /* Mobile */
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+
+    #landing {
+        padding: 0;
+    }
+
+    .gaming-img {
+        width: 100%;
+    }
+
+    .home-link {
+        z-index: 3;
+    }
+
     .nav-links {
         opacity: 0;
         display: flex;
