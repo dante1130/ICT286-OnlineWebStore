@@ -107,6 +107,15 @@ a {
     padding-top: 5%;
 }
 
+#aboutinfo {
+    padding: 32px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #00C1D4;
+}
+
 @keyframes slider {
     0% {
         left: 0;
@@ -134,7 +143,10 @@ a {
     }
 }
 
+
+
 .bottom-container {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     background-color: #00C1D4;
     padding-top: 32px;
@@ -143,16 +155,24 @@ a {
 
 .footer-link {
     color: #1ff8ff;
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin: auto 16px auto 16px;
 }
 
 .copyright {
-    font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 0.75rem;
     padding: 20px 0;
+}
+
+.contact {
+    font-size: 0.75rem;
+}
+
+.email {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: white;
 }
 
 .slogan {
