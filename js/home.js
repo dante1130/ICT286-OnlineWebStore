@@ -1,3 +1,6 @@
-$('.browse-btn').on('click', () => {
-    switchPage("search.html");
+$(document).ready(function () {
+    $('.browse-btn').on('click', () => {
+        switchPage("search.html");
+    });
 });
+

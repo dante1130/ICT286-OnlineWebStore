@@ -16,6 +16,11 @@ $('.burger-nav').on('click', () => {
     $('.burger-nav').toggleClass('toggle');
 });
 
+$('.footer-link').on('click', (e) => {
+    e.preventDefault();
+    switchPage($(e.currentTarget).attr('href'));
+});
+
 function switchPage(pageRef) {
     $.get(pageRef, (data) => {
         $('main').html(data);

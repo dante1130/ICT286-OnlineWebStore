@@ -11,8 +11,16 @@ html {
 }
 
 body {
+    display:flex; 
+    flex-direction:column; 
+    height: 100vh; 
     color: #EEEEEE;
     overflow-x: hidden;
+}
+
+footer {
+    min-height: 50px;
+    margin-top: auto; 
 }
 
 h1 {
@@ -124,6 +132,27 @@ a {
     95% {
         left: -300%;
     }
+}
+
+.bottom-container {
+    text-align: center;
+    background-color: #00C1D4;
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.footer-link {
+    color: #1ff8ff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: auto 16px auto 16px;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.75rem;
+    padding: 20px 0;
 }
 
 .slogan {
