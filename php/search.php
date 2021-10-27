@@ -7,13 +7,14 @@ $dbname = "X33670851";
 $mysqli = new mysqli($host, $user, $password, $dbname);
 
 if ($mysqli->connect_error) {
-	echo "Connection failed.";
 	die("Connection failed: " . $mysqli->connect_error);
 }
 
 $userinput = $_GET['userinput'];
 
-$query = "SELECT * FROM Products WHERE ProductName LIKE '{$userinput}'";
+$query = "SELECT * FROM Products, Stock 
+		  WHERE Products.ProductID = Stock.ProductID
+		  AND ProductName LIKE '%{$userinput}%'";
 $result = $mysqli->query($query);
 
 $products = array();
@@ -26,5 +27,5 @@ $result->free_result();
 
 $mysqli->close();
 
-echo json_encode($result);
+echo json_encode($products);
 ?>

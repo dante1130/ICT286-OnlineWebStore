@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     display:flex; 
     flex-direction:column; 
     height: 100vh; 
@@ -31,7 +32,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
     color: #00C1D4;
 }
 
@@ -51,29 +51,7 @@ a {
     text-decoration: none;
 }
 
-.browse-btn {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    background: linear-gradient(top, #11CDD4, #11999E);
-    background: linear-gradient(to bottom, #11CDD4, #11999E);
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 8px;
-    height: 1%;
-    line-height: 14px;
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    width: 25%;
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 16px;
-    padding-bottom: 32px;
-    box-shadow: 1px 1px 0 0 #000000;
-    text-shadow: 1px 1px 20px #000000;
-    cursor: pointer;
 
-}
 
 #search {
     padding: 5px;
@@ -143,7 +121,49 @@ a {
     }
 }
 
+.browse-btn {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: linear-gradient(top, #11CDD4, #11999E);
+    background: linear-gradient(to bottom, #11CDD4, #11999E);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    height: 1%;
+    line-height: 14px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    width: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    box-shadow: 1px 1px 0 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    cursor: pointer;
 
+}
+
+.search-container {
+    background-color: #2196F3;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5%;
+    font-size: 30px;
+    text-align: center;
+    margin: 5%;
+}
 
 .bottom-container {
     font-family: 'Montserrat', sans-serif;
@@ -227,8 +247,16 @@ a {
         font-size: 1rem;
     }
 
+    p {
+        font-size: 1rem;
+    }
+
     #landing {
         padding: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
     }
 
     .gaming-img {
