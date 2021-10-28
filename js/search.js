@@ -10,7 +10,7 @@ function displayItems(products) {
     products.forEach((element) => {
         let productDiv = $('<div/>')
                             .addClass("grid-item")
-                            .html(`<img class="product-img" src=images/cpu.jpg>
+                            .html(`<img class="product-img" src=${element.ImageURL}>
                                    <h2>${element.ProductName}</h2>
                                    <p class="price">$${element.Price}</p>
                                    <p class="product-desc">${element.ProductDesc}</p>`);
@@ -19,6 +19,6 @@ function displayItems(products) {
     });   
 }
 
-$('#search').on('input', (e) => {
+$('#search').on('input', () => {
     search($('#search').val());
 });

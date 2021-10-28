@@ -12,8 +12,9 @@ if ($mysqli->connect_error) {
 
 $userinput = $_GET['userinput'];
 
-$query = "SELECT * FROM Products, Stock 
+$query = "SELECT * FROM Products, Stock, ProductImages
 		  WHERE Products.ProductID = Stock.ProductID
+		  AND Products.ProductID = ProductImages.ProductID
 		  AND ProductName LIKE '%{$userinput}%'";
 $result = $mysqli->query($query);
 
