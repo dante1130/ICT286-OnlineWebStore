@@ -32,6 +32,7 @@ h1 {
 }
 
 h2 {
+    font-size: 1.5rem;
     color: #00C1D4;
 }
 
@@ -151,7 +152,7 @@ a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     padding: 10px;
 }
 
@@ -163,6 +164,21 @@ a {
     font-size: 30px;
     text-align: center;
     margin: 5%;
+}
+
+.product-desc {
+    font-size: 1rem;
+}
+
+.product-img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.price {
+    color: grey;
+    padding: 5%;
 }
 
 .bottom-container {
@@ -201,6 +217,7 @@ a {
 
 .gaming-img {
     width: 75%;
+    object-fit: contain;
 }
 
 .search-bar {
@@ -256,7 +273,7 @@ a {
     }
 
     .grid-container {
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
     }
 
     .gaming-img {
