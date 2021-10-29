@@ -242,7 +242,7 @@ a {
     left: 0;
     height: 92vh;
     top: 0;
-    padding-top: 10vh;
+    padding-top: 12vh;
     background-color: #512D6D;
     width: 25%;
     z-index: 1;
@@ -276,7 +276,7 @@ a {
 /* Mobile */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     
     h2 {
