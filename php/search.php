@@ -11,11 +11,17 @@ if ($mysqli->connect_error) {
 }
 
 $userinput = $_GET['userinput'];
+$category = $_GET['category'];
 
 $query = "SELECT * FROM Products, Stock, ProductImages
 		  WHERE Products.ProductID = Stock.ProductID
 		  AND Products.ProductID = ProductImages.ProductID
 		  AND ProductName LIKE '%{$userinput}%'";
+
+if ($category != "All") {
+	$query .= "AND ProductType LIKE '%{$category}%'";
+}
+
 $result = $mysqli->query($query);
 
 $products = array();

@@ -1,3 +1,5 @@
+var currentPage = "";
+
 $('document').ready(function() {
     switchPage("home.html");
 })
@@ -7,8 +9,13 @@ $('.home-link').on('click', () => {
 });
 
 $('.nav-link').on('click', (e) => {
-    switchPage("search.html");
-    search($(e.target).text());
+    if (currentPage != "search.html") switchPage("search.html");
+
+    let category = $(e.target).text();
+
+    $('#product-category').val(category);
+
+    search('', category);
 });
 
 $('.burger-nav').on('click', () => {
@@ -22,6 +29,8 @@ $('.footer-link').on('click', (e) => {
 });
 
 function switchPage(pageRef) {
+    currentPage = pageRef;
+
     $.get(pageRef, (data) => {
         $('main').html(data);
     });

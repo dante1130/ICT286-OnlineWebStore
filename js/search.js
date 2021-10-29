@@ -1,5 +1,5 @@
-function search(input) {
-    $.get("php/search.php", { userinput: input }, (data) => {
+function search(input, category) {
+    $.get("php/search.php", { userinput: input, category: category}, (data) => {
         displayItems(JSON.parse(data));
     });
 }
@@ -20,5 +20,9 @@ function displayItems(products) {
 }
 
 $('#search').on('input', () => {
-    search($('#search').val());
+    search($('#search').val(), $('#product-category').val());
 });
+
+$('#product-category').on('change', () => {
+    search($('#search').val(), $('#product-category').val());
+})
