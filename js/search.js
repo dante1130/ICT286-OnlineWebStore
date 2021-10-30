@@ -7,16 +7,22 @@ function search(input, category) {
 function displayItems(products) {
     $('.grid-container').empty();
 
-    products.forEach((element) => {
-        let productDiv = $('<div/>')
-                            .addClass("grid-item")
-                            .html(`<img class="product-img" src=${element.ImageURL}>
-                                   <h2>${element.ProductName}</h2>
-                                   <p class="price">$${element.Price}</p>
-                                   <p class="product-desc">${element.ProductDesc}</p>`);
-
-        $('.grid-container').append(productDiv);
-    });   
+    if (products.length > 0) {
+        products.forEach((element) => {
+            let productDiv = $('<div/>')
+                                .addClass("grid-item")
+                                .html(`<img class="product-img" src=${element.ImageURL} alt="product-img">
+                                       <h2>${element.ProductName}</h2>
+                                       <p class="price">$${element.Price}</p>
+                                       <p class="product-desc">${element.ProductDesc}</p>
+                                       <a href="#" class="add-product-btn">Add to cart</a>`);
+    
+            $('.grid-container').append(productDiv);
+        });   
+    } else {
+        $('.grid-container').append($('<div/>')
+                            .html(`<p>No products returned.</p>`));
+    }
 }
 
 $('#search').on('input', () => {

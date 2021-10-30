@@ -8,8 +8,15 @@ $('.home-link').on('click', () => {
     switchPage("home.html");
 });
 
+$('.shopping-cart-link').on('click', () => {
+    switchPage("shoppingcart.html");
+    getShoppingCart();
+})
+
 $('.nav-link').on('click', (e) => {
-    if (currentPage != "search.html") switchPage("search.html");
+    if (currentPage != "search.html") {
+        switchPage("search.html");
+    }
 
     let category = $(e.target).text();
 
@@ -27,6 +34,8 @@ $('.footer-link').on('click', (e) => {
     e.preventDefault();
     switchPage($(e.currentTarget).attr('href'));
 });
+
+
 
 function switchPage(pageRef) {
     currentPage = pageRef;
