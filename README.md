@@ -1,9 +1,3 @@
 # ICT286-OnlineWebStore
 
-## Running the website
-
-Website is run by php, so you have to host the php script.
-
-```cmd
-php -S localhost:8000
-```
+The website is hosted in the following URL: http://ceto.murdoch.edu.au/~33670851/assignment2/ICT286-OnlineWebStore/
